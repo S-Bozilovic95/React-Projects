@@ -5,8 +5,8 @@ import Score from './Score';
 const Table = () => {
     const number = ["one","two","three","four","five","six"];
 
-    const[diceNum, setDiceNum] = useState("");
-    const[diceNumTwo, setDiceNumTwo] = useState("");
+    const[diceNum, setDiceNum] = useState("one");
+    const[diceNumTwo, setDiceNumTwo] = useState("six");
     const[result,setResult] = useState([]);
     let[counter1,setCounter1] = useState(0);
     let[counter2,setCounter2] = useState(0);
@@ -25,6 +25,7 @@ const Table = () => {
 
 
     useEffect(()=>{
+       
         if(result.length === 2){
 
             if (result[0]>result[1]) {
@@ -40,20 +41,21 @@ const Table = () => {
         }
 
         if(counter1 === 5 || counter2 === 5){
-            setCounter1(0);
-            setCounter2(0);
+            setTimeout(() => {
+                setCounter1(0);
+                setCounter2(0);
+            }, 2000);
         }
         
     },[result])
 
-    console.log(result,counter1,counter2);
 
     return ( 
         <>
             <Dice diceNum ={diceNum}/>
             <Dice diceNum ={diceNumTwo}/>
             <button onClick={handleRoll}>Roll</button>
-            <Score counter1={counter1} counter2={counter2}/>
+            {counter1===5? <h2>player 1 won!</h2>: counter2===5? <h2>player 2 won!</h2> :<Score counter1={counter1} counter2={counter2}/>}
         </> 
     );
 }
