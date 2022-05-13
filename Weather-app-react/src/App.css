@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+
+/* variables */
+:root {
+    --blue: rgb(40, 52, 181);
+    --darkBlue: rgb(59, 106, 216);
+    --transparent:rgba(255, 255, 255, 0.651);
+    --white: RGB(255, 255, 255);
+    --lightGrey: rgba(238, 238, 238, 0.685);
+    --orange: rgb(241, 136, 15);
+    --lightOrange:rgb(248, 170, 24);
+    --transition: ease-in-out .3s;
+}
+
+/* default */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("Img/Sea\ of\ Clouds2.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* form */
+.searchForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.searchForm form{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.searchForm form input[type="text"]{
+    padding: 10px;
+    width: 50%;
+    border-style: none;
+    outline: none;
+    border-radius:10px ;
+    border: 1px solid var(--white);
+    background-color: var(--transparent);
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.searchForm form input[type="submit"]{
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    color: var(--white);
+    border-radius: 10px;
+    background-color: var(--orange);
+}
+
+.searchForm form input[type="submit"]:hover{
+    background-color:var(--lightOrange) ;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+
+
+/* current weather */
+.currentWeatherCard{
+    text-align: left;
+    width: 60%;
+    background-color: var(--lightGrey);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2px 0px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.currentWeatherCard:hover{
+    box-shadow: 0 0 10px rgb(70, 68, 68);
+    transition: var(--transition);
+}
+
+.currentWeatherCard img{
+    flex: 0 0 10%;
+    margin-right: 20px;
+}
+
+.currentWeatherCard div hgroup{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.currentWeatherCard div hgroup a{
+    text-decoration: none;
+    color: var(--darkBlue);
+}
+
+.currentWeatherCard div hgroup a:hover{
+    color: var(--orange);
+}
+
+#currentTemp{
+    background-color: var(--darkBlue);
+    padding: 3px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+#geoCoords{
+    color: var(--darkBlue);
+    font-weight: 700;
+}
+
+
+/* five day weather */
+.fiveDayCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    font-size: 1.2rem;
+    min-height: 70vh;
+}
+
+.fiveDayCard h1{
+    background-color: var(--orange);
+    color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.fiveDayCard h1 img{
+    margin-bottom: 6px;
+}
+
+.fiveDayCard ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.fiveDayCard ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--lightGrey);
+}
+
+.fiveDayCard ul li:hover{
+    box-shadow: 0 0 10px rgb(70, 68, 68);
+    transition: var(--transition);
+}
+
+.fiveDayCard ul li h3{
+    font-weight: 500;
+    border-bottom: 2px solid var(--darkBlue);
+}
+
+.fiveDayCard ul li span{
+    background-color: var(--darkBlue);
+    color: var(--white);
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.fiveDayCard button{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    color: var(--white);
+    border-radius: 10px;
+    background-color: var(--orange);
+}
+
+
+.fiveDayCard button:hover{
+background-color:var(--lightOrange) ;
+transition: var(--transition);
+cursor: pointer;
+}
+
+
+/* responsive */
+
+@media(max-width:768px){
+
+    .searchForm{
+        width: 100%;
+    }
+
+    .searchForm form input[type="text"]{
+        width:60%;
+    }
+
+    .currentWeatherCard{
+        width: 90%;
+        flex-direction: column;
+    }
+
+
+    .currentWeatherCard div hgroup a{
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .fiveDayCard h1{
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+
+}

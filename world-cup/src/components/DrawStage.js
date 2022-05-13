@@ -36,10 +36,10 @@ const DrawStage = ({tier1,tier2,tier3,tier4}) => {
         handleHats(tier4,setHat4);
     }
 
-    const writeHat = (arr,hatName) =>{
+    const writeGroup = (arr,GroupName) =>{
        return (
-        <ul className='hats'>
-            <h3>{hatName}</h3>
+        <ul className='groups'>
+            <h3>{GroupName}</h3>
             {arr.map((el,index)=>{
                 return <li key={index}><img style={{height:"15px"}} src={el.flags.png}/>{el.name.common}</li>
             })}
@@ -92,11 +92,15 @@ const DrawStage = ({tier1,tier2,tier3,tier4}) => {
     return ( 
             <>
                 <button onClick={()=>qualified()}>draw</button>
-                {hat1.length === 8 ? writeHat(hat1,"Hat #1"): null}
-                {hat2.length === 8 ? writeHat(hat2,"Hat #2"): null}
-                {hat3.length === 8 ? writeHat(hat3,"Hat #3"): null}
-                {hat4.length === 8 ? writeHat(hat4,"Hat #4"): null}
                 <button onClick={()=>handleGroups()}>draw Groups</button>
+                {groupA ? writeGroup(groupA,"Group A") : null}
+                {groupB ? writeGroup(groupB,"Group B") : null}
+                {groupC ? writeGroup(groupC,"Group C") : null}
+                {groupD ? writeGroup(groupD,"Group D") : null}
+                {groupE ? writeGroup(groupE,"Group E") : null}
+                {groupF ? writeGroup(groupF,"Group F") : null}
+                {groupG ? writeGroup(groupG,"Group G") : null}
+                {groupH ? writeGroup(groupH,"Group H") : null}
             </> 
 
         );
