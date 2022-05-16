@@ -1,0 +1,89 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* variables */
+:root{
+  --transition: .6s ease;
+  --padding: 50px 0px;
+  --darkViolet: rgb(32, 31, 45);
+  --fontViolet: rgb(29, 32, 48);
+  --orange: rgb(255, 73, 0);
+  --grey: rgb(242, 242, 244);
+  --fontGrey: rgb(192, 192, 192);
+  --white: white;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */ 
+
+/* default styles */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Koulen', cursive;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  transition: --var(transition);
+  cursor: pointer;
+}
+
+
+/* NAVBAR */
+
+nav .upper{
+  background-color: var(--darkViolet);
+  color: var(--white);
+}
+
+nav .upper article:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .upper article:first-child span{
+    padding: 0px 10px;
+}
+
+nav .upper article:first-child .crta{
+  padding-right: 20px;
+}
