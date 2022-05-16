@@ -72,18 +72,50 @@ a:hover{
 nav .upper{
   background-color: var(--darkViolet);
   color: var(--white);
+  padding: 10px 0px;
 }
 
-nav .upper article:first-child{
+nav .upper .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .upper .container article:first-child{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-nav .upper article:first-child span{
+nav .upper .container article:first-child span{
     padding: 0px 10px;
 }
 
-nav .upper article:first-child .crta{
+nav .upper .container article:first-child .crta{
   padding-right: 20px;
+}
+
+nav .upper .container article:last-child{
+  padding-right: 20px;
+}
+
+nav .upper .container article:last-child i{
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+nav .upper .container article:last-child i:hover{
+  cursor: pointer;
+}
+
+
+
+/* responsive */
+
+@media(max-width:768px){
+
+    nav .upper .container{
+      flex-direction: column;
+      text-align: center;
+    }
 }

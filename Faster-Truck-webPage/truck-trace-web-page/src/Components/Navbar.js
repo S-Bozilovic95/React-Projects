@@ -1,17 +1,17 @@
 import React from 'react';
-import {AiFillPhone,AiOutlineTwitter,AiFillInstagram,AiFillLinkedin,AiFillYoutube} from 'react-icons/ai';
-import {BsFillEnvelopeFill} from 'react-icons/bs';
-import {FaFacebookF} from 'react-icons/fa';
+import {AiFillInstagram,AiFillLinkedin,AiFillPhone,AiFillYoutube,AiOutlineTwitter,BsFillEnvelopeFill,FaFacebookF} from './index'
 
 const Navbar = () => {
 
 
     
     return ( 
-        <nav className='.container'>
+        <nav>
             <div className='upper'>
-                <article><AiFillPhone/> <span>+381 456 456</span> <span className='crta'>|</span> <BsFillEnvelopeFill/> <span>mail@info.com</span></article>
-                <article><i><FaFacebookF/><AiOutlineTwitter/><AiFillLinkedin/><AiFillInstagram/><AiFillYoutube/> </i></article>
+                <div className='container'>
+                    <article><AiFillPhone/> <span>+381 456 456</span> <span className='crta'>|</span> <BsFillEnvelopeFill/> <span>mail@info.com</span></article>
+                    <article><i><FaFacebookF/></i><i><AiOutlineTwitter/></i><i><AiFillLinkedin/></i><i><AiFillInstagram/></i><i><AiFillYoutube/></i></article>
+                </div>
             </div>
         </nav> 
     );
