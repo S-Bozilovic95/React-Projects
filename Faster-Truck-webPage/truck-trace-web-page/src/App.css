@@ -116,12 +116,22 @@ a:hover{
 
 .navbar{
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
 
 .navbar .dropDown{
   display: none;
+  font-size: 2rem;
+  color: var(--darkViolet);
+
+}
+
+.navbar .dropDown :hover{
+  cursor: pointer;
+  color: var(--orange);
+  transition: var(--transition);
 }
 
 .navbar h2{
@@ -168,18 +178,15 @@ a:hover{
 
   .navbar{
     justify-content: space-between;
-    
   }
 
   .navbar .list{
-    display: none;
     flex-direction: column;
     width: 100%;
-  }
+  } 
 
   .navbar .dropDown{
     display: block;
-    font-size: 2rem;
   }
 
 

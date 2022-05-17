@@ -1,19 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiListCheck } from 'react-icons/bi';
 import {Link} from 'react-router-dom'
 import {AiFillInstagram,AiFillLinkedin,AiFillPhone,AiFillYoutube,AiOutlineTwitter,BsFillEnvelopeFill,FaFacebookF,FaTruck,AiOutlineMenu,FaShoppingBasket} from './index'
+import { Fade, Slide, Hinge, AttentionSeeker } from "react-awesome-reveal";
 
 const Navbar = () => {
-    const [show,setShow] = useState(false);
 
-    // const handleDropdown = e =>{
-    //     e.preventDefault();
-    //     setShow(true)
-    // }
+    const[myStyle, setMystyle] = useState("flex")
 
-    // console.log(show);
+    const handleDropdown = (e) =>{
+        if(myStyle === "flex"){
+            setMystyle("none")
+        }else{
+            setMystyle("flex")
+        }
+    }
 
+    useEffect(()=>{
+     window.addEventListener('resize', ()=>{
+        if(window.innerWidth > 768){
+            setMystyle("flex")
+        }
+     }) 
+
+    },[])
     
+
+
     return ( 
         <nav>
             <div className='upper'>
@@ -25,9 +38,11 @@ const Navbar = () => {
 
             <div className='navbar container'>
                 <h2><FaTruck/> Faster</h2>
-                <i className='dropDown'><AiOutlineMenu/></i>
+                <i className='dropDown' onClick={()=> handleDropdown()}><AiOutlineMenu/></i>
 
-                <ul className='list'>
+              
+              <Fade direction='down' duration={500}>
+              <ul className='list' style={{display:`${myStyle}`}}>
                     <li><Link to="/" className='lol'>Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/service">Service</Link></li>
@@ -36,6 +51,8 @@ const Navbar = () => {
                     <li><Link to="/contact">Contact</Link></li>
                     <li><i className='basket'><FaShoppingBasket/></i></li>
                 </ul>
+              </Fade>
+               
                 
             </div>
         </nav> 
