@@ -28,6 +28,7 @@ const Navbar = () => {
 
 
     return ( 
+        <Fade direction='down' duration={500}>
         <nav>
             <div className='upper'>
                 <div className='container'>
@@ -42,7 +43,7 @@ const Navbar = () => {
                 <i className='dropDown' onClick={()=> handleDropdown()}><AiOutlineMenu/></i>
               
               <Fade direction='down' duration={500}>
-              <ul className='list' style={{display:`${myStyle}`}}>
+                <ul style={{display:`${myStyle}`}}>
                     <li><Link to="/" className='lol'>Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/service">Service</Link></li>
@@ -56,6 +57,7 @@ const Navbar = () => {
                 
             </div>
         </nav> 
+        </Fade>
     );
 }
  
