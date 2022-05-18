@@ -38,8 +38,8 @@ const Navbar = () => {
 
             <div className='navbar container'>
                 <h2><FaTruck/> Faster</h2>
-                <i className='dropDown' onClick={()=> handleDropdown()}><AiOutlineMenu/></i>
 
+                <i className='dropDown' onClick={()=> handleDropdown()}><AiOutlineMenu/></i>
               
               <Fade direction='down' duration={500}>
               <ul className='list' style={{display:`${myStyle}`}}>

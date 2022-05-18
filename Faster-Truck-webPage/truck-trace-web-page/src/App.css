@@ -172,8 +172,11 @@ a:hover{
   /* NAVBAR */
 
   nav .upper .container{
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
+  }
+
+  .upper .container article:first-child{
+    display: none;
   }
 
   .navbar{
