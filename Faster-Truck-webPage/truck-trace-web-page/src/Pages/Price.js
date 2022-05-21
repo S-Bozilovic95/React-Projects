@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from '../Components/Header';
+
 
 const Price = () => {
     return ( 
         <>
-        Price
+        <Header name={"-Prices-"}/>
         </>
      );
 }
