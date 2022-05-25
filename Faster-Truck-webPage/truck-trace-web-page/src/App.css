@@ -336,7 +336,7 @@ footer .row article span i:hover{
 }
 
 .contact article iframe{
-  width: 500px;
+  width: 430px;
   height: 570px;
   border: none;
 }
@@ -362,6 +362,7 @@ footer .row article span i:hover{
 .contact article:last-child form{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
     background-color: var(--grey);
     padding: 20px;
@@ -423,7 +424,7 @@ footer .row article span i:hover{
   /* home */
 
   .homeHeader{
-    height: 70vh;
+    height: auto;
   }
  
 
