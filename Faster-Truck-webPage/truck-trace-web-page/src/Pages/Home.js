@@ -4,7 +4,7 @@ import header from '../img/header.jpg'
 const Home = () => {
     return ( 
         <>
-            <header>
+            <header className='homeHeader'>
                 <h3>Safe & Faster </h3>
                 <h1>Logistic Services</h1>
                 <article>

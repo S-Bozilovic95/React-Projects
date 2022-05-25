@@ -172,6 +172,7 @@ a:hover{
 
 
 
+
 /* Header */
 
 header{
@@ -203,6 +204,9 @@ header article{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  width: auto;
+  padding: 15px;
 }
 
 header article input{
@@ -315,6 +319,7 @@ footer .row article span i:hover{
   align-items: center;
   justify-content: center;
   padding: var(--padding);
+  flex-wrap: wrap;
 }
 
 .contact article{
@@ -330,31 +335,97 @@ footer .row article span i:hover{
   color: var(--darkViolet);
 }
 
+.contact article iframe{
+  width: 500px;
+  height: 570px;
+  border: none;
+}
+
 .contact article:last-child{
   display: flex;
   flex-direction: column;
+  flex: 0 0 35%;
 }
 
 .contact article:last-child hgroup h4{
   color: var(--orange);
   font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
 .contact article:last-child hgroup h2{
   color: var(--darkViolet);
   font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .contact article:last-child form{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    background-color: var(--grey);
+    padding: 20px;
 }
+
+.contact article:last-child form input,textarea{
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0px;
+  font-size:1.1rem ;
+  outline: none;
+  border: none;
+  color: var(--fontGrey);
+}
+
+.contact article:last-child form input[type="submit"]{
+  background-color: var(--orange);
+  color: var(--white);
+  width: auto;
+  align-self: flex-start;
+  padding: 15px;
+}
+
+.contact article:last-child form input[type="submit"]:hover{
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--darkOrange);
+}
+
+
 
 
 /* responsive */
 
 @media(max-width:768px){
+
+  /* header */
+  header{
+    height: 30vh;
+  }
+
+  header h1{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  header article{
+    flex-wrap: wrap;
+  }
+
+  header article input{
+    font-size: 1.1rem;
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  
+
+  /* home */
+
+  .homeHeader{
+    height: 70vh;
+  }
+ 
 
   /* NAVBAR */
 
@@ -382,7 +453,6 @@ footer .row article span i:hover{
 
 /* footer */
 
-
 footer .row article:last-child{
   flex: 0 0 100%;
 }
@@ -390,5 +460,32 @@ footer .row article:last-child{
 footer .row article{
   flex: 0 0 100%;
 }
+
+footer article form input{
+  font-size: 1.1rem;
+  width: auto;
+  margin: 5px 0px;
+}
+
+footer article form input[type="submit"]{
+  width: auto;
+}
+
+
+/* contact */
+.contact article:last-child{
+  flex: 0 0 100%;
+}
+
+.contact article{
+  width: 100%;
+}
+
+.contact article iframe{
+  width: 100%;
+  height: 400px;
+}
+
+
 
 }
