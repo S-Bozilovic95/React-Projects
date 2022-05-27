@@ -1,5 +1,4 @@
 import React from 'react';
-import header from '../img/header.jpg'
 
 const Home = () => {
     return ( 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import {MdLocationOn} from 'react-icons/md';
-import { Fade, Slide, Hinge, AttentionSeeker } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 
 

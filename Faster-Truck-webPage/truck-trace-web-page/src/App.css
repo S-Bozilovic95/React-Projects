@@ -11,7 +11,7 @@
   --orange: rgb(255, 73, 0);
   --darkOrange:rgb(199, 69, 17);
   --grey: rgb(242, 242, 244);
-  --fontGrey: rgb(192, 192, 192);
+  --fontGrey: rgb(133, 128, 128);
   --white: white;
 }
 
@@ -323,7 +323,7 @@ footer .row article span i:hover{
 }
 
 .contact article{
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .contact article h3{
@@ -391,6 +391,144 @@ footer .row article span i:hover{
   transition: var(--transition);
   background-color: var(--darkOrange);
 }
+
+/* PRICE */
+
+/* PricingPack */
+
+.pricing{
+  padding: var(--padding);
+}
+
+.pricing hgroup{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.pricing hgroup h3{
+  color: var(--orange);
+  font-weight: 300;
+}
+
+.pricing hgroup h2{
+  color: var(--darkViolet);
+  letter-spacing: 2px;
+}
+
+.pricing div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.pricing div article{
+  flex: 0 0 20%;
+  background-color: var(--grey);
+  padding: 15px 0px;
+  margin: 10px;
+}
+
+.pricing div article h2{
+    font-size: 3rem;
+    color: var(--fontGrey);
+    font-weight: 300;
+    padding: 10px;
+}
+
+.pricing div article h4{
+  font-size: 3rem;
+  background-color: var(--orange);
+  font-weight: 300;
+  padding: 0px 10px;
+}
+
+.pricing div article p{
+  color: var(--fontGrey);
+  padding: 15px 5px 0px 5px;
+  font-size: 1.3rem;
+}
+
+.pricing div article button{
+  font-size: 1.3rem;
+  color: var(--white);
+  background-color: var(--orange);
+  border: none;
+  padding: 10px;
+  margin: 15px auto;
+}
+
+.pricing div article button:hover{
+  background-color: var(--darkOrange);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* testimonial */
+
+.testimonial{
+  padding: var(--padding);
+}
+
+.testimonial hgroup{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.testimonial hgroup h3{
+  color: var(--orange);
+  font-weight: 300;
+}
+
+.testimonial hgroup h2{
+  color: var(--darkViolet);
+  letter-spacing: 2px;
+}
+
+.testimonial article{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  background-color: var(--grey);
+  width: 50%;
+  margin: auto;
+}
+
+.testimonial article div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.testimonial article div p{
+ color: var(--fontViolet);
+ font-weight: 400;
+}
+
+.testimonial article div img{
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.testimonial .quote{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  color: var(--orange);
+}
+
+.testimonial p{
+  padding: 10px 20px;
+  color: var(--fontGrey);
+  font-weight: 300;
+
+}
+
 
 
 
@@ -487,6 +625,30 @@ footer article form input[type="submit"]{
   height: 400px;
 }
 
+
+/* price */
+
+/* pricingPacl */
+.pricing div article{
+  flex: 0 0 80%;
+}
+
+.pricing hgroup{
+  font-size: 1.5rem;
+}
+
+.pricing div article h2{
+  font-size: 2.5rem;
+}
+
+.pricing div article h4{
+  font-size: 2.5rem;
+}
+
+/* testimonial */
+.testimonial hgroup{
+  font-size: 1.5rem;
+}
 
 
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BiListCheck } from 'react-icons/bi';
 import {Link} from 'react-router-dom'
 import {AiFillInstagram,AiFillLinkedin,AiFillPhone,AiFillYoutube,AiOutlineTwitter,BsFillEnvelopeFill,FaFacebookF,FaTruck,AiOutlineMenu,FaShoppingBasket} from './index'
-import { Fade, Slide, Hinge, AttentionSeeker } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Navbar = () => {
 
