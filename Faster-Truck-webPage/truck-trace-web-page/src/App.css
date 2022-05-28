@@ -323,7 +323,7 @@ footer .row article span i:hover{
 }
 
 .contact article{
-  margin: 10px auto;
+  margin: 10px 20px;
 }
 
 .contact article h3{
@@ -494,8 +494,12 @@ footer .row article span i:hover{
   justify-content: center;
   position: relative;
   background-color: var(--grey);
-  width: 50%;
-  margin: auto;
+  margin: 10px auto 25px;
+  width: 80%;
+}
+
+.testimonial article:hover{
+  cursor: pointer;
 }
 
 .testimonial article div{
