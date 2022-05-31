@@ -533,13 +533,82 @@ footer .row article span i:hover{
 
 }
 
+/* SERVICE */
+
+/* logistics */
+
+.logistics{
+  text-align: center;
+  padding: var(--padding);
+}
+
+
+.logistics h3{
+  color: var(--orange);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.logistics h2{
+  color: var(--darkViolet);
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.logistics div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logistics div article{
+ flex: 0 0 20%;
+  padding: 20px 10px;
+  margin:15px 20px;
+}
+
+.logistics div article h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 300;
+  padding:15px 0px;
+  font-size: 1.5rem;
+}
+
+.logistics div article h4 i{
+ color: var(--darkViolet);
+ font-size: 2rem;
+ margin: 5px;
+}
+
+.logistics div article p{
+  color: var(--fontGrey);
+  font-size: 1.1rem;
+  margin: 20px auto;
+}
+
+.logistics div article a{
+  color: var(--orange);
+  border-bottom: 0.5px solid var(--grey);
+}
+
+.logistics div article a:hover{
+  color: var(--darkOrange);
+  border-bottom: 0.5px solid var(--fontGrey);
+}
+
+
 
 
 
 
 /* responsive */
 
-@media(max-width:768px){
+@media(max-width:1024px){
 
   /* header */
   header{
@@ -652,6 +721,20 @@ footer article form input[type="submit"]{
 /* testimonial */
 .testimonial hgroup{
   font-size: 1.5rem;
+}
+
+
+/* services */
+
+/* logistics */
+
+.logistics{
+  width: 80%;
+}
+
+
+.logistics div article{
+  flex: 0 0 100%;
 }
 
 
