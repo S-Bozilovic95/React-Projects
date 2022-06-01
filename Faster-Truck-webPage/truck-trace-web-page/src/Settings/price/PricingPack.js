@@ -3,7 +3,7 @@ import React from 'react';
 
 const PricingPack = () => {
     return ( 
-        <section className='container pricing'>
+        <section className='container1 pricing'>
             <hgroup>
                 <h3>Pricing Plan</h3>
                 <h2>Affordable Pricing Packages</h2>

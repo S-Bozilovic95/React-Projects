@@ -15,20 +15,7 @@
   --white: white;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */ 
+
 
 @keyframes down{
   0% {transform: translateY(0%);}
@@ -61,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .container1{
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -425,7 +412,7 @@ footer .row article span i:hover{
 }
 
 .pricing div article{
-  flex: 0 0 20%;
+  flex: 0 0 30%;
   background-color: var(--grey);
   padding: 15px 0px;
   margin: 10px;
@@ -494,8 +481,7 @@ footer .row article span i:hover{
   justify-content: center;
   position: relative;
   background-color: var(--grey);
-  margin: 10px auto 25px;
-  width: 80%;
+  margin: 25px 10px;
 }
 
 .testimonial article:hover{
@@ -506,6 +492,7 @@ footer .row article span i:hover{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .testimonial article div p{
@@ -563,9 +550,9 @@ footer .row article span i:hover{
 }
 
 .logistics div article{
- flex: 0 0 20%;
+  flex: 0 0 25%;
   padding: 20px 10px;
-  margin:15px 20px;
+  margin:15px auto;
 }
 
 .logistics div article h4{
@@ -600,6 +587,108 @@ footer .row article span i:hover{
   color: var(--darkOrange);
   border-bottom: 0.5px solid var(--fontGrey);
 }
+
+/* numbers */
+
+.numbers{
+  background-color: var(--grey);
+}
+
+.numbers .container1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.numbers article{
+    flex: 0 0 50%;
+    padding: var(--padding);
+}
+
+.numbers article h3{
+  color: var(--orange);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.numbers article h2{
+  color: var(--darkViolet);
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+.numbers article div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.numbers article div span{
+  flex:0 0 30%;
+}
+
+.numbers article div span h4{
+  color:var(--orange) ;
+  font-size: 3rem;
+}
+
+.numbers article div span p{
+  color: var(--darkViolet);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.numbers form{
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--orange);
+  flex: 0 0 35%;
+  padding: 30px 40px;
+  color: var(--fontViolet);
+}
+
+.numbers form input{
+    padding: 10px 20px;
+    outline:  none;
+    border: none;
+    margin: 10px auto;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.numbers form select{
+  padding: 10px 20px;
+  outline:  none;
+  border: none;
+  margin: 10px auto;
+  width: 100%;
+  color: var(--fontViolet);
+  font-size: 1.2rem;
+}
+
+.numbers form select option{
+  font-size: 1.2rem;
+  padding: 10px;
+  outline:  none;
+  border: none;
+}
+
+.numbers form input[type="submit"]{
+  background-color: var(--darkViolet);
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.numbers form input[type="submit"]:hover{
+  background-color: rgb(24, 7, 22);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+
 
 
 
@@ -724,6 +813,7 @@ footer article form input[type="submit"]{
 }
 
 
+
 /* services */
 
 /* logistics */
@@ -737,5 +827,14 @@ footer article form input[type="submit"]{
   flex: 0 0 100%;
 }
 
+/* numbers */
+.numbers article{
+  flex: 0 0 100%;
+}
+
+.numbers form{
+  flex: 0 0 100%;
+  padding: 50px;
+}
 
 }

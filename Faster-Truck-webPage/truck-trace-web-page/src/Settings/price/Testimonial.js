@@ -17,17 +17,17 @@ const Testimonial = () => {
           items: 5
         },
         desktop: {
-          breakpoint: { max: 3000, min: 768 },
+          breakpoint: { max: 3000, min: 1024 },
           items: 3
         },
         tablet: {
-          breakpoint: { max: 768, min: 0},
+          breakpoint: { max: 1024, min: 0},
           items: 1
         },
     };
 
     return ( 
-        <section className='container testimonial'>
+        <section className='container1 testimonial'>
             <hgroup>
                 <h3>Testimonial</h3>
                 <h2>Our Clients Say</h2>

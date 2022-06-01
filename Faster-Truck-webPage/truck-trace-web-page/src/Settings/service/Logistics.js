@@ -4,7 +4,7 @@ import { FaPlane, FaShip, FaStore, FaTruck } from 'react-icons/fa';
 const Logistics = () => {
 
     return ( 
-        <section className='logistics container'>
+        <section className='logistics container1'>
             <h3>Our Services</h3>
             <h2>Best Logistic Services</h2>
 
