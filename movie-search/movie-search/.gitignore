@@ -9,7 +9,7 @@
 /coverage
 
 #apiKey
-src/assets/ApiKey.js
+/src/assets/ApiKey.js
 
 # production
 /build

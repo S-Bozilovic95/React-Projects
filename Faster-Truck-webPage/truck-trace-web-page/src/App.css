@@ -689,6 +689,42 @@ footer .row article span i:hover{
 }
 
 
+/* About */
+
+.about{
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about h4{
+  color: var(--orange);
+  font-size: 1.5rem;
+}
+
+.about h2{
+  color: var(--fontViolet);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p{
+  color: var(--fontGrey);
+  font-size: 1.2rem;
+}
+
+.about article{
+  flex: 0 0 50%;
+  padding: 10px;
+}
+
+.about article img{
+  width: 100%;
+}
+
+
+
 
 
 
@@ -698,6 +734,14 @@ footer .row article span i:hover{
 /* responsive */
 
 @media(max-width:1024px){
+
+  .container{
+    width: 90%;
+  }
+
+  .container1{
+    width: 90%;
+  }
 
   /* header */
   header{
