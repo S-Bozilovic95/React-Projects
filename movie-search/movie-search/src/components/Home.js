@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import API from '../assets/api';
 import { ApiKey } from '../assets/ApiKey';
+import Form from './Form';
 import MovieList from './MovieList';
 
 
@@ -12,7 +13,7 @@ const Home = () => {
         error: null,
     });
 
-    const [name,setName] = useState("game of thrones");
+    const [name,setName] = useState("better call saul");
 
     // destructuring
     const {data,loading,error}= movies;
@@ -49,10 +50,7 @@ const Home = () => {
 
     return ( 
         <>
-        <form onSubmit={(e)=>handleMovies(e)}>
-            <input type="text" placeholder='enter name' onChange={(e)=>setName(e.target.value)}/>
-            <input type="submit"/>
-        </form>
+        <Form handleMovies={handleMovies} setName={setName}/>
         {!loading? <MovieList list={data.Search}/>:error}
         </>
      );
