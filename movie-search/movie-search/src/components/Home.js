@@ -13,7 +13,7 @@ const Home = () => {
         error: null,
     });
 
-    const [name,setName] = useState("better call saul");
+    const [name,setName] = useState("Friends");
 
     // destructuring
     const {data,loading,error}= movies;

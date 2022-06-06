@@ -47,7 +47,12 @@ const MovieDetails = () => {
     
     return ( 
         <>
-        <h2>{imdbID}</h2>
+        <h1>{data.Title}</h1>
+        <img src={data.Poster}/>
+        <h3>{data.imdbRating}</h3>
+        <h4>{data.Genre} ({data.Year})</h4>
+        {data.Type ==="series"?<h4>Seasons: {data.totalSeasons}</h4>:<h4>Movie</h4>}
+        <p>{data.Plot}</p>
         <button onClick={handleBack}>Back</button>
         </>
      );
