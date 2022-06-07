@@ -13,7 +13,6 @@ const Home = () => {
         error: null,
     });
 
-    const [name,setName] = useState("Friends");
 
     // destructuring
     const {data,loading,error}= movies;
@@ -35,24 +34,20 @@ const Home = () => {
                 })
             }
         })
-    }
-
-    const handleMovies = e =>{
-        e.preventDefault();
-        getInfo(name);
+        localStorage.setItem("film",name);
     }
     
     useEffect(()=>{
-        getInfo(name);
+        getInfo(localStorage.film);
     },[])
 
 
 
     return ( 
-        <>
-        <Form handleMovies={handleMovies} setName={setName}/>
+        <section className='home'>
+        <Form getInfo={getInfo}/>
         {!loading? <MovieList list={data.Search}/>:error}
-        </>
+        </section>
      );
 }
  

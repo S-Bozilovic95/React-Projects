@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const MovieItem = ({movie}) => {
     return ( 
         <>
-            <li><Link to={`/MovieDetails/${movie.imdbID}`}>{movie.Title}</Link><img src={movie.Poster}/></li>
+            <li className='list__item'><Link to={`/MovieDetails/${movie.imdbID}`} className='list__link'>{movie.Title}</Link><img src={movie.Poster} className='list__image'/></li>
         </>
      );
 }

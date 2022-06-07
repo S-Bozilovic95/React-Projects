@@ -1,0 +1,119 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+// variables
+$primary: #313131;
+$secondary: #fde21c;
+$lightgray: #d3d3d3;
+$text: #585858;
+$white: #fff;
+$black: #000000;
+$orange: #e78d38;
+$lightOrange: #be9d7d;
+$gray:#444;
+$background:#222f36;
+$footer:#292825;
+$fontSize: 16px;
+$fontFamily: 'Montserrat',sans-serif;
+$transition: .4s ease-in;
+$padding: 60px 0;
+
+
+// DEFAULT STYLES
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.6;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    background-color: $background;
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $lightgray;
+
+    &:hover{
+        transition: $transition;
+        color: $secondary;
+    }
+}
+
+
+// navbar
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: $footer;
+
+    .form{
+        .form__input{
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+        }
+
+        .form__submit{
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+            background-color: $orange;
+            color: $white;
+
+            &:hover{
+                background-color: $lightOrange;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+
+// list
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .list__item{
+        flex: 0 0 33%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+
+        .list__image{
+            width: 50%;
+            height: 15vh;
+        }
+    }
+}
+
+

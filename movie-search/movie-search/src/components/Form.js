@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-const Form = ({handleMovies,setName}) => {
+const Form = ({getInfo}) => {
+
+    const [name,setName] = useState("Friends");
+
+    const handleMovies = e =>{
+        e.preventDefault();
+        getInfo(name);
+    }
+
     return ( 
-        <form onSubmit={(e)=>handleMovies(e)}>
-            <input type="text" placeholder='enter name' onChange={(e)=>setName(e.target.value)}/>
-            <input type="submit"/>
-        </form>
+        <navbar className="navbar">
+            <form onSubmit={(e)=>handleMovies(e)} className='form'>
+                <input className='form__input' type="text" placeholder='enter name' onChange={(e)=>setName(e.target.value)}/>
+                <input className='form__submit' type="submit"/>
+            </form>
+        </navbar>
      );
 }
  

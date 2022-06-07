@@ -1,11 +1,16 @@
-import './App.css';
+import './App.scss';
 import Home from './components/Home';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieDetails from './components/MovieDetails.js';
 
 function App() {
+
+
+
+
+
   return (
-    <div className="App">
+    <div>
       <Router>
         <Routes>
           <Route path='/' element={<Home/>} />
