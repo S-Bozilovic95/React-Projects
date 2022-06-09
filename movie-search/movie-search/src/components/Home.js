@@ -3,6 +3,7 @@ import API from '../assets/api';
 import { ApiKey } from '../assets/ApiKey';
 import Form from './Form';
 import MovieList from './MovieList';
+import cinnamon from '../img/cinnamon-roll-collor.png';
 
 
 
@@ -44,9 +45,13 @@ const Home = () => {
 
 
     return ( 
-        <section className='home'>
+        <section className='home container'>
+        <div className='home__logo'>
+        <h2><span>Cine</span>Mon</h2>
+        <img src={cinnamon}/>
+        </div>
         <Form getInfo={getInfo}/>
-        {!loading? <MovieList list={data.Search}/>:error}
+        {!loading ? <MovieList list={data.Search}/>:error}
         </section>
      );
 }

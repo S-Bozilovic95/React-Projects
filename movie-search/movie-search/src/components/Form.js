@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {FaSearch} from 'react-icons/fa';
 
 const Form = ({getInfo}) => {
 
@@ -11,9 +12,9 @@ const Form = ({getInfo}) => {
 
     return ( 
         <navbar className="navbar">
-            <form onSubmit={(e)=>handleMovies(e)} className='form'>
-                <input className='form__input' type="text" placeholder='enter name' onChange={(e)=>setName(e.target.value)}/>
-                <input className='form__submit' type="submit"/>
+            <form  className='navbar__form'>
+                <input className='navbar__form__input' type="text" placeholder='Search for Movies, TV Series...' onChange={(e)=>setName(e.target.value)}/>
+                <i className='navbar__form__icon' onClick={(e)=>handleMovies(e)}><FaSearch/></i>
             </form>
         </navbar>
      );
