@@ -4,6 +4,7 @@ import { ApiKey } from '../assets/ApiKey';
 import Form from './Form';
 import MovieList from './MovieList';
 import cinnamon from '../img/cinnamon-roll-collor.png';
+import Header from './Header';
 
 
 
@@ -51,6 +52,7 @@ const Home = () => {
         <img src={cinnamon}/>
         </div>
         <Form getInfo={getInfo}/>
+        <Header/>
         {!loading ? <MovieList list={data.Search}/>:error}
         </section>
      );
