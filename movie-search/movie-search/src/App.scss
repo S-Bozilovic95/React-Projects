@@ -221,39 +221,74 @@ a{
 
 
 
-
-
-
-
-
 // list
 
-// .list{
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-start;
-//     flex-wrap: wrap;
+.list{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-//     .list__item{
-//         flex: 0 0 32%;
-//         display: flex;
-//         flex-direction: column-reverse;
-//         align-items: center;
-//         margin: 5px ;
+    &__item{
+        flex: 0 0 23%;
+        position: relative;
+        height: 55vh;
+        margin:10px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $lightGray;
 
-//         @media(max-width:1024px){
-//             flex:0 0 47%;
-//         }
 
-//         @media(max-width:768px){
-//             flex:0 0 100%;
-//         }
+      
 
-//         .list__image{
-//             width: 55%;
-//             height: 40vh;
-//         }
-//     }
-// }
+        &__card{
+            position: absolute;
+            bottom: 0;
+            backdrop-filter: blur(2rem);
+            width: 100%;
+            height: 35%;
+            padding: 20px;
+            transition: $transition-out;
+            overflow: hidden;
+
+            &:hover{
+                transition: $transition-in;
+                height: 55%;
+            }
+
+            &__header{
+                font-size: 1.2rem ;
+                color: $lightGray;
+                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
+            }
+
+            &__year{
+                color: $yellow;
+                font-size: 1.3rem;
+                font-weight: 200;
+            }
+
+            &__type{
+                color: $yellow;
+                margin-top: 10px;
+                font-weight: 600;
+            }
+
+            &__link{
+                font-size: 1.7rem;
+                font-weight: 200;
+                display: block;
+                margin-top: 80px;
+                text-align: center;
+                border-top: 1px solid $lightGray;
+                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
+            }
+
+        }
+    }
+
+    
+}
 
 

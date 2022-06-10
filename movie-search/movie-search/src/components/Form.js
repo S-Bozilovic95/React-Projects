@@ -11,12 +11,12 @@ const Form = ({getInfo}) => {
     }
 
     return ( 
-        <navbar className="navbar">
+        <nav className="navbar">
             <form  className='navbar__form'>
                 <input className='navbar__form__input' type="text" placeholder='Search for Movies, TV Series...' onChange={(e)=>setName(e.target.value)}/>
                 <i className='navbar__form__icon' onClick={(e)=>handleMovies(e)}><FaSearch/></i>
             </form>
-        </navbar>
+        </nav>
      );
 }
  
