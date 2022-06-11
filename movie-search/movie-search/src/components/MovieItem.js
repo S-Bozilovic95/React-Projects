@@ -11,7 +11,7 @@ const MovieItem = ({movie}) => {
                 <p className='list__item__card__year'>{movie.Year}</p>
                 <h4 className='list__item__card__header'>{movie.Title}</h4>
                 <p className='list__item__card__type'>{movie.Type}</p>
-                <Link to={`/MovieDetails/${movie.imdbID}`} className='list__item__card__link'>Get Details</Link>
+                <Link to={`/MovieDetails/${movie.imdbID}`} className='list__item__card__link'>More Info</Link>
                 </div>
             </li>
         </>
