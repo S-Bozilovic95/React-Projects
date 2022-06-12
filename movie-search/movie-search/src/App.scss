@@ -240,7 +240,7 @@ a{
         color: $lightGray;
 
 
-        @media(max-width:1400px){
+        @media (max-width:1400px){
             flex: 0 0 48%;
             margin:5px;
         }
@@ -260,14 +260,22 @@ a{
             transition: $transition-out;
             overflow: hidden;
 
-            @media(max-width:1024px){
-                padding: 10px;
-            }
-
     
             &:hover{
                 transition: $transition-in;
                 height: 60%;
+            }
+
+            @media(min-width:1024px){
+                padding: 10px;
+            }
+
+            @media(max-width:768px){
+                padding: 5px;
+                &:hover{
+                    transition: none;
+                    height: 35%;
+                }
             }
 
             &__header{
@@ -280,7 +288,7 @@ a{
                 }
 
                 @media(max-width:768px){
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -294,17 +302,15 @@ a{
                 }
 
                 @media(max-width:768px){
-                    font-size: 1.1rem;
+                    font-size: 0.9rem;
                 }
             }
 
             &__type{
                 color: $yellow;
-                margin-top: 10px;
                 font-weight: 600;
 
                 @media(max-width:1500px){
-                    margin-top: 5px;
                     font-weight: 400;
                 }
             }
@@ -317,22 +323,14 @@ a{
                 text-align: center;
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
 
-                @media(max-width:1580px){
-                    margin-top: 45px;
-                }
-
                 @media(max-width:1024px){
                     font-size: 1.5rem;
-                    margin-top: 60px;
+                    margin-top: 50px;
                 }
 
                 @media(max-width:768px){
-                    margin-top: 70px;
-                }
-
-                @media(max-width:300px){
-                    font-size: 1rem;
-                    margin-top: 30px;
+                    font-size: 1.1rem;
+                    margin-top: 0;
                 }
             }
 
