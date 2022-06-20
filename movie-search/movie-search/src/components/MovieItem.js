@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MovieItem = ({movie}) => {
-    console.log(movie);
 
     return ( 
         <>

@@ -100,7 +100,7 @@ a{
 
 
 
-// navbar
+// Navbar
 .navbar{
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@ a{
 }
 
 
-// header
+// Header
 .header{
     display: flex;
     justify-content:center;
@@ -221,7 +221,7 @@ a{
 
 
 
-// list
+// MovieItem
 
 .list{
     display: flex;
@@ -319,13 +319,13 @@ a{
                 font-size: 1.7rem;
                 font-weight: 200;
                 display: block;
-                margin-top: 70px;
+                margin-top: 80px;
                 text-align: center;
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
 
                 @media(max-width:1024px){
                     font-size: 1.5rem;
-                    margin-top: 50px;
+                    margin-top: 60px;
                 }
 
                 @media(max-width:768px){
@@ -336,8 +336,101 @@ a{
 
         }
     }
-
-    
 }
 
 
+// MovieDetail
+
+.detail{
+    
+    &__banner{
+        padding: 20px;
+        height: 30vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h1{
+            color: $yellow;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.644);
+
+            @media(max-width:1024px){
+                font-size: 2rem;
+            }
+    
+            @media(max-width:768px){
+                font-size: 1.5rem;  
+            }
+        }
+    }
+
+    &__container{
+        
+        &__ratings{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+
+            @media(max-width:768px){
+                padding: 10px 0px; 
+            }
+
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    font-size: 1.2rem;
+                    color: $white;
+                    margin:0px 20px 0px 5px;
+                }
+
+                img{
+                    width: 35px;
+
+                    @media(max-width:768px){
+                        width: 25px;  
+                    }
+                }
+            }
+        }
+
+        &__descShort{
+            padding: 10px 0px;
+
+            &__type{
+                background-color: $yellow;
+                display: inline-block;
+                padding: 2px;
+                border-radius: 5px;
+                margin: 5px auto;
+            }
+
+            h4{
+                color: $white;
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+
+            p{
+                color: $white;
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+
+                i{
+                    font-size: 1.1rem;
+                    color: $yellow;
+                    margin-right:5px;
+                }
+            }
+        }
+    }
+}
