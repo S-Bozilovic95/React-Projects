@@ -5,6 +5,7 @@ import Form from './Form';
 import MovieList from './MovieList';
 import cinnamon from '../img/cinnamon-roll-collor.png';
 import Header from './Header';
+import Footer from './Footer';
 
 
 
@@ -47,13 +48,14 @@ const Home = () => {
 
     return ( 
         <section className='home container'>
-        <div className='home__logo'>
-        <h2><span>Cine</span>Mon</h2>
-        <img src={cinnamon}/>
-        </div>
-        <Form getInfo={getInfo}/>
-        <Header/>
-        {!loading ? <MovieList list={data.Search}/>:error}
+            <div className='home__logo'>
+                <h2><span>Cine</span>Mon</h2>
+                <img src={cinnamon}/>
+            </div>
+            <Form getInfo={getInfo}/>
+            <Header/>
+            {!loading ? <MovieList list={data.Search}/>:error}
+            <Footer/>
         </section>
      );
 }

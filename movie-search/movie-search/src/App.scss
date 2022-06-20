@@ -5,7 +5,7 @@
 // variables
 $yellow: rgb(255, 192, 0);
 $lightGray: #d3d3d3;
-$white: #fff;
+$white: rgb(218, 209, 209);
 $fontGray:RGB(64, 68, 79);
 $background:rgb(18, 22, 33);
 $lightBackground:rgb(27, 33, 45);
@@ -411,12 +411,17 @@ a{
                 padding: 2px;
                 border-radius: 5px;
                 margin: 5px auto;
+                color: $fontGray!important;
             }
 
             h4{
                 color: $white;
                 font-size: 1.1rem;
                 font-weight: 300;
+
+                @media(max-width:768px){
+                    font-size: 1rem; 
+                }
             }
 
             p{
@@ -425,12 +430,73 @@ a{
                 align-items: center;
                 font-size: 1.1rem;
 
+                @media(max-width:768px){
+                    font-size: 1rem; 
+                }
+
                 i{
                     font-size: 1.1rem;
                     color: $yellow;
                     margin-right:5px;
+
+                    @media(max-width:768px){
+                        font-size: 1rem; 
+                    }
                 }
             }
         }
+
+        &__descLong{
+            
+            h4{
+                color: $fontGray;
+                font-size: 1rem;
+                font-weight: 300;
+                margin-bottom: 10px;
+
+                span{
+                    color: $yellow;
+                }
+            }
+
+            p{
+                color: $white;
+                font-size: 1.2rem;
+                margin: 25px auto;
+
+                @media(max-width:768px){
+                    font-size: 1rem; 
+                }
+
+                @media(max-width:520px){
+                    text-align: justify;
+                }
+            }
+        }
+
+        &__back{
+            color: $fontGray;
+            display: inline-block;
+            font-size: 2.2rem;
+            margin-top: 20px;
+            transition: $transition-out;
+
+            &:hover{
+                color: $yellow;
+                cursor: pointer;
+                transition: $transition-in;
+            }
+            
+            @media(max-width:1024px){
+                font-size: 2rem;
+            }
+
+            @media(max-width:768px){
+                margin-top: 5px;
+                font-size: 1.8rem;
+            }
+            
+        }
     }
 }
+
