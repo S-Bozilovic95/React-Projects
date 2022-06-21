@@ -7,6 +7,7 @@ import {FaRegClock, FaArrowLeft} from 'react-icons/fa';
 import imdbPic from '../img/imdbLogo.png';
 import rottenPic from '../img/rotten.png';
 import metaPic from '../img/metaCritic.png';
+import cinnamon from '../img/cinnamon-roll-collor.png';
 import Footer from './Footer';
 
 const MovieDetails = () => {
@@ -44,7 +45,6 @@ const MovieDetails = () => {
         getDetails(imdbID);
     },[])
 
-    console.log(details);
 
     const handleBack = () =>{
         navigate("/");
@@ -55,11 +55,19 @@ const MovieDetails = () => {
             return (<div key={index}>{el.Source==="Rotten Tomatoes"?<img src={rottenPic} />:el.Source==="Internet Movie Database"?<img src={imdbPic}/>:el.Source==="Metacritic"?<img src={metaPic} />:<GiPopcorn/>} <p>{el.Value}</p></div>)
         })
     }
+
+    const checkAvailable = info =>{
+       return info==="N/A"?"No Info" : info;
+    }
+
+    const checkPoster = poster =>{
+        return poster==="N/A"? cinnamon : poster
+    }
     
     return ( 
        <>
             <section className='detail'>
-                    <article style={{backgroundImage:`linear-gradient(to top,rgba(18, 22, 33, 2),rgba(18, 22, 33, 0.5)), url(${data.Poster})`}} className='detail__banner'>
+                    <article style={{backgroundImage:`linear-gradient(to top,rgba(18, 22, 33, 2),rgba(18, 22, 33, 0.5)), url(${checkPoster(data.Poster)})`}} className='detail__banner'>
                         <h1>{data.Title}</h1>
                     </article>
 
@@ -71,15 +79,15 @@ const MovieDetails = () => {
                         <article className='detail__container__descShort'>
                             <h4 className='detail__container__descShort__type'>{data.Type ==="series"? `Seasons: ${data.totalSeasons}`:"Movie"}</h4>
                             <h4>{data.Genre}</h4>
-                            <h4>{data.Country} - {data.Released}</h4>
-                            <p><i><FaRegClock/></i> {data.Runtime}</p>
+                            <h4>{data.Country}  ({data.Released})</h4>
+                            <p><i><FaRegClock/></i> {checkAvailable(data.Runtime)}</p>
                         </article>
 
                         <article className='detail__container__descLong'>
-                            <h4><span>Cast: </span>{data.Actors ==="N/A"? "No Info" : data.Actors}</h4>
-                            <h4><span>Director: </span>{data.Director==="N/A"? "No Info" : data.Director}</h4>
-                            <h4><span>Awards:</span> {data.Awards==="N/A"? "No Info"  : data.Awards}</h4>
-                            <p>{data.Plot}</p>
+                            <h4><span>Cast: </span>{checkAvailable(data.Actors)}</h4>
+                            <h4><span>Director: </span>{checkAvailable(data.Director)}</h4>
+                            <h4><span>Awards:</span> {checkAvailable(data.Awards)}</h4>
+                            <p>{checkAvailable(data.Plot)}</p>
                         </article>
                         <i className='detail__container__back' onClick={handleBack}><FaArrowLeft/></i>
                 </div>

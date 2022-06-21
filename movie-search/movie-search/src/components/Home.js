@@ -47,7 +47,8 @@ const Home = () => {
 
 
     return ( 
-        <section className='home container'>
+       <>
+         <section className='home container'>
             <div className='home__logo'>
                 <h2><span>Cine</span>Mon</h2>
                 <img src={cinnamon}/>
@@ -55,8 +56,9 @@ const Home = () => {
             <Form getInfo={getInfo}/>
             <Header/>
             {!loading ? <MovieList list={data.Search}/>:error}
-            <Footer/>
         </section>
+        <Footer/>
+       </>
      );
 }
  
