@@ -6,9 +6,6 @@ import MovieDetails from './components/MovieDetails.js';
 function App() {
 
 
-
-
-
   return (
     <div>
       <Router>

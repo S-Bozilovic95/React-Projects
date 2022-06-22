@@ -14,37 +14,20 @@ const MovieDetails = () => {
     const[details,setDetails] = useState({
         data:{},
         loading: true,
-        error: null
     })
     const {imdbID} = useParams();
     const navigate = useNavigate();
 
-    const {data,loading,error} = details;
+    const {data,loading} = details;
 
     const getDetails= async (imdbID) =>{
-        await API.get(`?i=${imdbID}&plot=full&${ApiKey}`)
-        .then(res=>{
-           if(res.data.Response === "True"){
-               setDetails({
-                   ...details,
-                   data:res.data,
-                   loading:false,
-               })
-           }else{
-               setDetails({
-                   ...details,
-                   loading:false,
-                   error:res.data.Error
-               })
-           }
-        })
+       let response = await API.get(`?i=${imdbID}&plot=full&${ApiKey}`)
+       setDetails({...details, data:response.data, loading:false})
     }
-
 
     useEffect(()=>{
         getDetails(imdbID);
     },[])
-
 
     const handleBack = () =>{
         navigate("/");
@@ -63,6 +46,8 @@ const MovieDetails = () => {
     const checkPoster = poster =>{
         return poster==="N/A"? cinnamon : poster
     }
+    
+
     
     return ( 
        <>

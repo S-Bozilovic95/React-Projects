@@ -5,7 +5,7 @@ import cinnamon from '../img/cinnamon-roll-collor.png';
 const MovieItem = ({movie}) => {
 
     const checkPoster = poster =>{
-        return poster==="N/A"? cinnamon : poster
+        return poster==="N/A"? cinnamon : poster;
     }
 
     return ( 

@@ -3,12 +3,13 @@ import {FaSearch} from 'react-icons/fa';
 
 const Form = ({getInfo}) => {
 
-    const [name,setName] = useState("Friends");
+    const [name,setName] = useState("");
 
-    const handleMovies = e =>{
+    const handleMovies = async(e) =>{
         e.preventDefault();
         getInfo(name);
     }
+
 
     return ( 
         <nav className="navbar">

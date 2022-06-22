@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {FaLinkedin, FaGithub} from 'react-icons/fa';
 import {SiGmail} from 'react-icons/si';
 
 const Footer = () => {
 
-    
     return ( 
         <footer>
             <p>&copy;2022 Designed By Svetozar Božilović</p>

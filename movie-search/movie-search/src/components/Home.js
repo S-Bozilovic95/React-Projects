@@ -6,6 +6,7 @@ import MovieList from './MovieList';
 import cinnamon from '../img/cinnamon-roll-collor.png';
 import Header from './Header';
 import Footer from './Footer';
+import PageButtons from './PageButtons';
 
 
 
@@ -13,37 +14,35 @@ const Home = () => {
     const [movies,setMovies] = useState({
         data: [],
         loading: true,
-        error: null,
+        totalResult:0,
     });
 
+    const [page, setPage] = useState(1);
 
     // destructuring
-    const {data,loading,error}= movies;
+    const {data,loading,totalResult}= movies;
 
     const getInfo = async (name) =>{
-        await API.get(`?s=${name}&${ApiKey}`)
-        .then(res=>{
-            if(res.data.Response==="True"){
-                setMovies({
-                    ...movies,
-                    data:res.data, 
-                    loading:false
-                })
-            }else{
-                setMovies({
-                    ...movies,
-                    loading:false,
-                    error: res.data.Error
-                })
-            }
-        })
+       let response = await API.get(`?s=${name}&page=${page}&${ApiKey}`)
+        setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
         localStorage.setItem("film",name);
     }
+    console.log(movies);
+
+    const handlePages=(value)=>{
+        if(value==="-" && page>1){
+            setPage(page-1);
+        }else if( value==="+" && page<Math.ceil(totalResult/10)){
+            setPage(page+1);
+        }
+    }
+
+    console.log(page);
+
     
     useEffect(()=>{
         getInfo(localStorage.film);
-    },[])
-
+    },[page])
 
 
     return ( 
@@ -55,8 +54,9 @@ const Home = () => {
             </div>
             <Form getInfo={getInfo}/>
             <Header/>
-            {!loading ? <MovieList list={data.Search}/>:error}
+            {!loading ? <MovieList list={data}/>:"loading animation!!!!!"}
         </section>
+        <PageButtons handlePages={handlePages}/>
         <Footer/>
        </>
      );
