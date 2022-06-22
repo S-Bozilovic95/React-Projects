@@ -56,7 +56,7 @@ const Home = () => {
             <Header/>
             {!loading ? <MovieList list={data}/>:"loading animation!!!!!"}
         </section>
-        <PageButtons handlePages={handlePages}/>
+        <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
         <Footer/>
        </>
      );
