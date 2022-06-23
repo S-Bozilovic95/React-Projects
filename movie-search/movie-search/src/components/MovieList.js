@@ -3,13 +3,14 @@ import MovieItem from './MovieItem';
 
 const MovieList = ({list}) => {
 
+    console.log(list);
 
     return ( 
         <ul className='list container'>
-            {list.length!=0?
+            {list!==undefined ?
                 list.map((el,index)=>{
                 return <MovieItem movie={el} key={index}/>
-                }):"loading"
+                }):(<h3>There Are No Results For This Item</h3>)
             }
         </ul>
      );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import API from '../assets/api';
 import { ApiKey } from '../assets/ApiKey';
 import Form from './Form';
@@ -7,6 +7,8 @@ import cinnamon from '../img/cinnamon-roll-collor.png';
 import Header from './Header';
 import Footer from './Footer';
 import PageButtons from './PageButtons';
+import Skeleton from './Skeleton';
+import SkeletonSecton from './SkeletonSection';
 
 
 
@@ -18,6 +20,8 @@ const Home = () => {
     });
 
     const [page, setPage] = useState(1);
+
+
 
     // destructuring
     const {data,loading,totalResult}= movies;
@@ -43,6 +47,8 @@ const Home = () => {
         getInfo(localStorage.film);
     },[page])
 
+let arr =[];
+console.log(typeof arr);
 
     return ( 
        <>
@@ -53,9 +59,10 @@ const Home = () => {
             </div>
             <Form getInfo={getInfo}/>
             <Header/>
-            {!loading ? <MovieList list={data}/>: loading && data.length==0? "loading animation!!!!!": "sceleton"}
+            {!loading ? <MovieList list={data}/>: <Skeleton num={10}/>}
         </section>
         <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
+        <SkeletonSecton/>
         <Footer/>
        </>
      );

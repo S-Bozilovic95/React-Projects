@@ -58,6 +58,7 @@ a{
 
 // home
 .home{
+    
 
     &__logo{
         padding: 10px 0px;
@@ -355,6 +356,7 @@ a{
 // MovieDetail
 
 .detail{
+    // height: 80vh;
     
     &__banner{
         padding: 20px;
@@ -593,7 +595,7 @@ a{
 
 footer{
     padding: 40px 20px;
-    margin-top:5% ;
+    margin-top: 15%;
     background-color: $lightBackground;
     text-align: center;
     
@@ -644,3 +646,55 @@ footer{
         }
     }
 }
+
+
+// Skeleton
+
+.skeletonBox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .skeleton{
+        flex: 0 0 23%;
+        height: 55vh;
+        margin:10px;
+        background-color: $lightBackground;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @media (max-width:1400px){
+            flex: 0 0 48%;
+            margin:5px;
+        }
+
+        @media(max-width:768px){
+            flex: 0 0 100%;
+        }
+    
+        &__desc{
+            height: 30vh;
+            width: 100%;
+            background-color: $fontGray;
+        }
+    
+        &__header{
+            width: 60%;
+            height: 2vh;
+            background-color: $fontGray;
+        }
+    
+        &__text{
+            width: 65%;
+            height: 3vh;
+            background-color: $fontGray;
+        }
+    }
+}
+
+
+// Skeleton section

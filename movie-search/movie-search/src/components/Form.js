@@ -15,6 +15,7 @@ const Form = ({getInfo}) => {
         
     }
 
+    
 
     return ( 
         <nav className="navbar">

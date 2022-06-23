@@ -64,7 +64,7 @@ const MovieDetails = () => {
                         <article className='detail__container__descShort'>
                             <h4 className='detail__container__descShort__type'>{data.Type ==="series"? `Seasons: ${data.totalSeasons}`:"Movie"}</h4>
                             <h4>{data.Genre}</h4>
-                            <h4>{data.Country}  ({data.Released})</h4>
+                            <h4>{checkAvailable(data.Country)}  ({data.Released})</h4>
                             <p><i><FaRegClock/></i> {checkAvailable(data.Runtime)}</p>
                         </article>
 
