@@ -3,8 +3,6 @@ import MovieItem from './MovieItem';
 
 const MovieList = ({list}) => {
 
-    console.log(list);
-
     return ( 
         <ul className='list container'>
             {list!==undefined ?

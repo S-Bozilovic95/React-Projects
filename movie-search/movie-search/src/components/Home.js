@@ -12,23 +12,34 @@ import Skeleton from './Skeleton';
 
 
 const Home = () => {
+    // states
     const [movies,setMovies] = useState({
         data: [],
         loading: true,
         totalResult:0,
     });
-
     const [page, setPage] = useState(1);
+    const prevName = useRef();
 
 
-
-    // destructuring
+    // destructuring movies object
     const {data,loading,totalResult}= movies;
 
+    // functions
     const getInfo = async (name) =>{
-       let response = await API.get(`?s=${name}&page=${page}&${ApiKey}`)
+
+       if(prevName.current === name){
+        let response = await API.get(`?s=${name}&page=${page}&${ApiKey}`)
         setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
         localStorage.setItem("film",name);
+        console.log("javljam da je page",page, "iz prve grane");
+
+       }else if(prevName.current !=name){
+            setMovies({...movies, loading:true})
+            let response = await API.get(`?s=${name}&page=1&${ApiKey}`)
+            setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
+            localStorage.setItem("film",name); 
+       }
     }
     
 
@@ -41,13 +52,12 @@ const Home = () => {
     }
 
 
-    
+    // useeffect
     useEffect(()=>{
         getInfo(localStorage.film);
+        prevName.current=localStorage.film;
     },[page])
 
-let arr =[];
-console.log(typeof arr);
 
     return ( 
        <>
