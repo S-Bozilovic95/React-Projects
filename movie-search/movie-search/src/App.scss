@@ -356,7 +356,7 @@ a{
 // MovieDetail
 
 .detail{
-    // height: 80vh;
+    
     
     &__banner{
         padding: 20px;
@@ -698,3 +698,57 @@ footer{
 
 
 // Skeleton section
+
+.skeletonSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $lightBackground;
+    padding: 20px;
+    height: 80%;
+    width: 100%;
+
+    &__item1{
+        width: 100%;
+        height: 30vh;
+        background-color: $fontGray;
+    }
+
+    &__item2{
+        width: 10%;
+        height: 3vh;
+        margin-top: 5%;
+        background-color: $fontGray;
+    }
+
+    &__item3{
+        width: 15%;
+        height: 3vh;
+        margin-top: 5%;
+        background-color: $fontGray;
+    }
+
+    &__item4{
+        width: 30%;
+        height: 10vh;
+        margin-top: 5%;
+        background-color: $fontGray;
+    }
+
+    &__item5{
+        width: 27%;
+        height: 10vh;
+        margin-top: 5%;
+        background-color: $fontGray;
+    }
+
+    &__item6{
+        width: 85%;
+        height: 20vh;
+        margin-top: 10%;
+        background-color: $fontGray;
+    }
+
+}

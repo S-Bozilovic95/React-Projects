@@ -8,7 +8,6 @@ import Header from './Header';
 import Footer from './Footer';
 import PageButtons from './PageButtons';
 import Skeleton from './Skeleton';
-import SkeletonSecton from './SkeletonSection';
 
 
 
@@ -62,7 +61,6 @@ console.log(typeof arr);
             {!loading ? <MovieList list={data}/>: <Skeleton num={10}/>}
         </section>
         <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
-        <SkeletonSecton/>
         <Footer/>
        </>
      );
