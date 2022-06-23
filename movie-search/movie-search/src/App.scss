@@ -149,6 +149,9 @@ a{
             transition: $transition-out;
             padding:10px 10px 0px;
             color: $lightGray;
+            background: none;
+            outline: none;
+            border: none;
 
             @media(max-width:1024px){
                 font-size: 1.8rem;
@@ -271,7 +274,7 @@ a{
             }
 
             @media(max-width:768px){
-                padding: 5px;
+
                 &:hover{
                     transition: none;
                     height: 35%;
@@ -279,17 +282,16 @@ a{
             }
 
             &__header{
-                font-size: 1.2rem ;
+                font-size: 1.4rem ;
                 color: $lightGray;
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
 
                 @media(max-width:1024px){
-                    font-size: 1.1rem;
-                }
-
-                @media(max-width:768px){
-                    font-size: 0.9rem;
-                }
+                    font-size: 1.2rem;
+                } 
             }
 
             &__year{
@@ -301,36 +303,31 @@ a{
                     font-size: 1.2rem;
                 }
 
-                @media(max-width:768px){
-                    font-size: 0.9rem;
-                }
+               
             }
 
             &__type{
                 color: $yellow;
-                font-weight: 600;
-
-                @media(max-width:1500px){
-                    font-weight: 400;
-                }
+                font-weight: 400;
             }
+
 
             &__link{
                 font-size: 1.7rem;
                 font-weight: 200;
                 display: block;
-                margin-top: 80px;
+                margin-top: 30%;
                 text-align: center;
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
 
                 @media(max-width:1024px){
                     font-size: 1.5rem;
-                    margin-top: 60px;
+                    margin-top: 30%;
                 }
 
                 @media(max-width:768px){
-                    font-size: 1.1rem;
-                    margin-top: 0;
+                    font-size: 1.3rem;
+                    margin-top: 15px;
                 }
             }
 
