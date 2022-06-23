@@ -27,7 +27,7 @@ const Home = () => {
         setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
         localStorage.setItem("film",name);
     }
-    console.log(movies);
+    
 
     const handlePages=(value)=>{
         if(value==="-" && page>1){
@@ -37,7 +37,6 @@ const Home = () => {
         }
     }
 
-    console.log(page);
 
     
     useEffect(()=>{
@@ -54,7 +53,7 @@ const Home = () => {
             </div>
             <Form getInfo={getInfo}/>
             <Header/>
-            {!loading ? <MovieList list={data}/>:"loading animation!!!!!"}
+            {!loading ? <MovieList list={data}/>: loading && data.length==0? "loading animation!!!!!": "sceleton"}
         </section>
         <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
         <Footer/>
