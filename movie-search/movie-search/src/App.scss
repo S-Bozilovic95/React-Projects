@@ -356,7 +356,7 @@ a{
 // MovieDetail
 
 .detail{
-    
+    margin-bottom: 15%;
     
     &__banner{
         padding: 20px;
@@ -595,7 +595,7 @@ a{
 
 footer{
     padding: 40px 20px;
-    margin-top: 15%;
+    margin-top: 5%;
     background-color: $lightBackground;
     text-align: center;
     
@@ -780,3 +780,34 @@ footer{
     }
 
 }
+
+
+
+// Scroll to Top
+
+.scrollToTop{
+    position: fixed;
+    padding: 12px 15px; 
+    bottom: 5%;
+    right: 3%;
+    background-color: $lightBackground;
+    border-radius: 25%;
+    border: 1px solid $white;
+    font-size: 1.5rem;
+    color: $white;
+    transition: $transition-out !important;
+
+    @media(max-width:768px){
+        font-size: 1rem;
+        bottom: 5%;
+        right: 2%;
+    }
+
+    &:hover{
+        cursor: pointer;
+        transition: $transition-in !important;
+        background-color: $fontGray;
+        color: $yellow;
+    }
+}
+

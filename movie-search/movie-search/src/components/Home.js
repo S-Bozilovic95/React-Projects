@@ -8,6 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import PageButtons from './PageButtons';
 import Skeleton from './Skeleton';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -36,7 +37,8 @@ const Home = () => {
 
        }else if(prevName.current !=name){
             setMovies({...movies, loading:true})
-            let response = await API.get(`?s=${name}&page=1&${ApiKey}`)
+            setPage(1)
+            let response = await API.get(`?s=${name}&page${page}1&${ApiKey}`)
             setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
             localStorage.setItem("film",name); 
        }
@@ -71,6 +73,7 @@ const Home = () => {
             {!loading ? <MovieList list={data}/>: <Skeleton num={10}/>}
         </section>
         <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
+        <ScrollToTop/>
         <Footer/>
        </>
      );
