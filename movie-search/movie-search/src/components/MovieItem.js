@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import cinnamon from '../img/cinnamon-roll-collor.png';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MovieItem = ({movie}) => {
 
@@ -8,9 +10,17 @@ const MovieItem = ({movie}) => {
         return poster==="N/A"? cinnamon : poster;
     }
 
+    useEffect(()=>{
+        AOS.init({
+            duration: 200,
+            easing: 'ease-in-quad',
+            once:false,
+        });
+    },[])
+
     return ( 
         <>
-            <li className='list__item' style={{backgroundImage:`url(${checkPoster(movie.Poster)})`}}>
+            <li className='list__item' data-aos="fade-up" style={{backgroundImage:`url(${checkPoster(movie.Poster)})`}}>
                 <div className='list__item__card'>
                 <p className='list__item__card__year'>{movie.Year}</p>
                 <h4 className='list__item__card__header'>{movie.Title}</h4>
