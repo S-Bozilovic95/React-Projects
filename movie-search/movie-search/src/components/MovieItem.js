@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import cinnamon from '../img/cinnamon-roll-collor.png';
+import popcorn from '../img/popcorn.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const MovieItem = ({movie}) => {
 
     const checkPoster = poster =>{
-        return poster==="N/A"? cinnamon : poster;
+        return poster==="N/A"? popcorn : poster;
     }
 
     useEffect(()=>{

@@ -811,3 +811,41 @@ footer{
     }
 }
 
+// No Result
+
+.resultBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 40vh;
+    // background-color: $lightBackground;
+    padding: 20px;
+    // border-radius: 5px;
+
+    &__img{
+        width: 50%;
+        
+        @media(max-width:1024px){
+            width: 70%;
+        }
+
+        @media(max-width:520px){
+            width: 100%;
+        }
+    }
+
+    &__gif{
+        position: absolute;
+        width: 70%;
+        
+        @media(max-width:1024px){
+            width: 100%;
+        }
+
+        @media(max-width:520px){
+            width: 120%;
+        }
+        
+    }
+}

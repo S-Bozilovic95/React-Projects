@@ -53,6 +53,7 @@ const Home = () => {
     }
 
 
+
     // useeffect
     useEffect(()=>{
         prevName.current=localStorage.film;
