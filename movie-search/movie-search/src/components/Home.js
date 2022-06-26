@@ -57,7 +57,7 @@ const Home = () => {
     // useeffect
     useEffect(()=>{
         prevName.current=localStorage.film;
-        getInfo(prevName);
+        getInfo(localStorage.film);
     },[page])
 
 
