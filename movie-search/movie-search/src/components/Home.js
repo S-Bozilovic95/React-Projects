@@ -33,11 +33,10 @@ const Home = () => {
         let response = await API.get(`?s=${name}&page=${page}&${ApiKey}`)
         setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
         localStorage.setItem("film",name);
-        console.log("javljam da je page",page, "iz prve grane");
 
        }else if(prevName.current !=name){
-            setMovies({...movies, loading:true})
             setPage(1)
+            setMovies({...movies, loading:true})
             let response = await API.get(`?s=${name}&page${page}1&${ApiKey}`)
             setMovies({...movies,data:response.data.Search, loading:false, totalResult:response.data.totalResults})
             localStorage.setItem("film",name); 
@@ -56,8 +55,8 @@ const Home = () => {
 
     // useeffect
     useEffect(()=>{
-        getInfo(localStorage.film);
         prevName.current=localStorage.film;
+        getInfo(localStorage.film);
     },[page])
 
 

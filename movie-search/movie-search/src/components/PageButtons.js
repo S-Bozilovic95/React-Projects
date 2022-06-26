@@ -12,7 +12,7 @@ const PageButtons = ({handlePages,page,totalResult}) => {
                     <span>{page}</span>
                     <i onClick={()=>handlePages("+")}><FaArrowRight/></i>
                 </article>
-                <p className='pages__infoText'>Total Pages: {Math.ceil(totalResult/10)}</p>
+                <p className='pages__infoText'>Total Pages: {isNaN(totalResult)?0 : Math.ceil(totalResult/10)}</p>
             </section>
         </>
      );

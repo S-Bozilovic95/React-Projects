@@ -1,5 +1,7 @@
 import React from 'react';
 import MovieItem from './MovieItem';
+import NoResult from './NoResult';
+
 
 const MovieList = ({list}) => {
 
@@ -8,7 +10,7 @@ const MovieList = ({list}) => {
             {list!==undefined ?
                 list.map((el,index)=>{
                 return <MovieItem movie={el} key={index}/>
-                }):(<h3>There Are No Results For This Item</h3>)
+                }): <NoResult/>
             }
         </ul>
      );
