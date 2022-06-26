@@ -8,6 +8,7 @@ const NoResult = () => {
         <section className='container resultBox'>
             <img src={popcorn} className='resultBox__img'/>
             <img src={noFound} className='resultBox__gif' />
+            <h2 className='resultBox__text'>No <span>Results</span> Found</h2>
         </section>
      );
 }

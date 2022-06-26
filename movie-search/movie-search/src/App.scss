@@ -811,6 +811,7 @@ footer{
     }
 }
 
+
 // No Result
 
 .resultBox{
@@ -818,6 +819,7 @@ footer{
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
     height: 40vh;
     // background-color: $lightBackground;
     padding: 20px;
@@ -847,5 +849,18 @@ footer{
             width: 120%;
         }
         
+    }
+
+    &__text{
+        color: $white;
+        font-size: 2rem;
+
+        @media(max-width:768px){
+            font-size: 1.7rem;
+        }
+
+        span{
+            color: $yellow;
+        }
     }
 }
