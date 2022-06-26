@@ -470,6 +470,7 @@ a{
         }
 
         &__descLong{
+            margin-bottom: 5%;
             
             h4{
                 color: $fontGray;
@@ -709,7 +710,7 @@ footer{
     padding: 20px;
     height: 40%;
     width: 100%;
-    margin: 5% auto;
+    margin: 5% auto 15% auto;
 
     @media(max-width:768px){
         height: 80%;
@@ -854,9 +855,10 @@ footer{
     &__text{
         color: $white;
         font-size: 2rem;
+        text-align: center;
 
         @media(max-width:768px){
-            font-size: 1.7rem;
+            font-size: 1.5rem;
         }
 
         span{
