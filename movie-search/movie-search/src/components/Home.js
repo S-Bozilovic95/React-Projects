@@ -58,6 +58,7 @@ const Home = () => {
     useEffect(()=>{
         prevName.current=localStorage.film;
         getInfo(localStorage.film);
+        window.scrollTo({top:0,behavior:'smooth'});
     },[page])
 
 
