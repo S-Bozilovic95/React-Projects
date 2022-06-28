@@ -846,8 +846,8 @@ footer{
     &:hover{
         cursor: pointer;
         transition: $transition-in !important;
-        background-color: $fontGray;
         color: $yellow;
+        border-color: $yellow;
     }
 
     &:active{
