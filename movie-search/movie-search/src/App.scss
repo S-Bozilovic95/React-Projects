@@ -116,11 +116,15 @@ a{
 
 
     &__form{
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
 
+        @media(max-width:768px){
+            width: 80%;
+        }
 
         &__input{
             padding: 10px 20px;
@@ -129,24 +133,25 @@ a{
             outline: none;
             font-size: 1.1rem;
             background-color: $lightBackground;
-            width: 50%;
+            width: 100%;
             color: $lightGray;
 
+
             @media(max-width:1024px){
-                width: 60%;
                 font-size: 1rem;
             }
 
             @media(max-width:768px){
-                width: 95%;
                 padding: 10px;
                 font-size: 0.9rem;
             }
         }
 
         &__icon{
+            position: absolute;
+            right: 0;
+            margin-right: 5px;
             font-size: 2rem;
-            color: $white;
             transition: $transition-out;
             padding:10px 10px 0px;
             color: $lightGray;
@@ -167,6 +172,11 @@ a{
                 cursor: pointer;
                 color: $yellow;
                 transition: $transition-in;
+            }
+
+            &:active{
+                transform: scale(0.7);
+                transition-duration: 0.1s;
             }
         }
     }
@@ -809,6 +819,11 @@ footer{
         transition: $transition-in !important;
         background-color: $fontGray;
         color: $yellow;
+    }
+
+    &:active{
+        transform: scale(0.7)!important;
+        transition-duration: 0.1s!important;
     }
 }
 

@@ -27,6 +27,7 @@ const MovieDetails = () => {
     }
 
     useEffect(()=>{
+        window.scrollTo({top:0,behavior:'smooth'});
         getDetails(imdbID);
     },[])
 
