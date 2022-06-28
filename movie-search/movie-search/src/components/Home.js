@@ -5,7 +5,6 @@ import Form from './Form';
 import MovieList from './MovieList';
 import cinnamon from '../img/cinnamon-roll-collor.png';
 import Header from './Header';
-import Footer from './Footer';
 import PageButtons from './PageButtons';
 import Skeleton from './Skeleton';
 import ScrollToTop from './ScrollToTop';
@@ -75,7 +74,6 @@ const Home = () => {
         </section>
         <PageButtons handlePages={handlePages} page={page} totalResult={totalResult}/>
         <ScrollToTop/>
-        <Footer/>
        </>
      );
 }

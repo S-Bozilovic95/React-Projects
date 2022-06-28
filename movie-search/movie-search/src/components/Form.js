@@ -9,10 +9,8 @@ const Form = ({getInfo}) => {
         e.preventDefault();
         if(name.length!=0){
             getInfo(name);
-        }else{
-            console.log('ne radi');
+            setName("");
         }
-        
     }
 
     
@@ -20,7 +18,7 @@ const Form = ({getInfo}) => {
     return ( 
         <nav className="navbar">
             <form  className='navbar__form'  onSubmit={(e)=>handleMovies(e)}>
-                <input className='navbar__form__input' type="text" placeholder='Search for Movies, TV Series...' minLength={3} onChange={(e)=>setName(e.target.value)} required/>
+                <input className='navbar__form__input' type="text" value={name} placeholder='Search for Movies, TV Series...' minLength={3} onChange={(e)=>setName(e.target.value)} required/>
                 <button className='navbar__form__icon' type='submit'><FaSearch/></button>
             </form>
         </nav>

@@ -2,6 +2,8 @@ import './App.scss';
 import Home from './components/Home';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieDetails from './components/MovieDetails.js';
+import Footer from './components/Footer';
+
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
           <Route path="MovieDetails/:imdbID" element={<MovieDetails/>} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }

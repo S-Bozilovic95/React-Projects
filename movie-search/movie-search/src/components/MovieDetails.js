@@ -8,7 +8,6 @@ import imdbPic from '../img/imdbLogo.png';
 import rottenPic from '../img/rotten.png';
 import metaPic from '../img/metaCritic.png';
 import cinnamon from '../img/cinnamon-roll-collor.png';
-import Footer from './Footer';
 import SkeletonSecton from './SkeletonSection';
 
 const MovieDetails = () => {
@@ -57,7 +56,7 @@ const MovieDetails = () => {
                 !loading ? (
                     <section className='detail'>
                         <article style={{backgroundImage:`linear-gradient(to top,rgba(18, 22, 33, 2),rgba(18, 22, 33, 0.5)), url(${checkPoster(data.Poster)})`}} className='detail__banner'>
-                            <h1>{data.Title}</h1>
+                            <h1>{checkAvailable(data.Title)}</h1>
                         </article>
 
                         <div className='container'>
@@ -66,9 +65,9 @@ const MovieDetails = () => {
                                 </article>
 
                                 <article className='detail__container__descShort'>
-                                    <h4 className='detail__container__descShort__type'>{data.Type ==="series"? `Seasons: ${data.totalSeasons}`:"Movie"}</h4>
-                                    <h4>{data.Genre}</h4>
-                                    <h4>{checkAvailable(data.Country)}  ({data.Released})</h4>
+                                    <h4 className='detail__container__descShort__type'>{data.Type ==="series"? `Seasons: ${checkAvailable(data.totalSeasons)}`:"Movie"}</h4>
+                                    <h4>{checkAvailable(data.Genre)}</h4>
+                                    <h4>{checkAvailable(data.Country)}  ({checkAvailable(data.Released)})</h4>
                                     <p><i><FaRegClock/></i> {checkAvailable(data.Runtime)}</p>
                                 </article>
 
@@ -83,7 +82,6 @@ const MovieDetails = () => {
                     </section>
                 ) :<SkeletonSecton/>
             }
-            <Footer/>
        </>
         
      );

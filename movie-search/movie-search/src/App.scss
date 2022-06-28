@@ -121,9 +121,14 @@ a{
         justify-content: center;
         align-items: center;
         position: relative;
+        
 
         @media(max-width:768px){
             width: 80%;
+        }
+
+        @media(max-width:520px){
+            width: 100%;
         }
 
         &__input{
@@ -136,7 +141,6 @@ a{
             width: 100%;
             color: $lightGray;
 
-
             @media(max-width:1024px){
                 font-size: 1rem;
             }
@@ -145,6 +149,7 @@ a{
                 padding: 10px;
                 font-size: 0.9rem;
             }
+
         }
 
         &__icon{
@@ -342,6 +347,11 @@ a{
                 text-align: center;
                 text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
 
+                &:active{
+                    transform: scale(0.7);
+                    transition-duration: 0.1s;
+                }
+
                 @media(max-width:1024px){
                     font-size: 1.5rem;
                     margin-top: 30%;
@@ -366,7 +376,6 @@ a{
 // MovieDetail
 
 .detail{
-    margin-bottom: 15%;
     
     &__banner{
         padding: 20px;
@@ -480,7 +489,7 @@ a{
         }
 
         &__descLong{
-            margin-bottom: 5%;
+            margin-bottom: 100px;
             
             h4{
                 color: $fontGray;
@@ -523,6 +532,11 @@ a{
                 color: $yellow;
                 cursor: pointer;
                 transition: $transition-in;
+            }
+
+            &:active{
+                transform: scale(0.7);
+                transition-duration: 0.1s;
             }
             
             @media(max-width:1024px){
@@ -569,6 +583,11 @@ a{
                 color: $yellow;
                 cursor: pointer;
             }
+
+            &:active{
+                transform: scale(0.7);
+                transition-duration: 0.1s;
+            }
         }
 
         span{
@@ -606,7 +625,7 @@ a{
 
 footer{
     padding: 40px 20px;
-    margin-top: 5%;
+    margin-top: 10vh;
     background-color: $lightBackground;
     text-align: center;
     
@@ -628,6 +647,11 @@ footer{
             font-size: 1.8rem;
             margin: 5px 10px;
 
+            &:active{
+                transform: scale(0.7);
+                transition-duration: 0.1s;
+            }
+
             @media(max-width:768px){
                 font-size: 1.3rem;
             }
@@ -639,6 +663,11 @@ footer{
 
             &:hover span{
                 visibility: visible;
+            }
+
+            &:active{
+                transform: scale(0.8);
+                transition-duration: 0.1s;
             }
 
             span{
@@ -720,7 +749,7 @@ footer{
     padding: 20px;
     height: 40%;
     width: 100%;
-    margin: 5% auto 15% auto;
+    margin: 20px auto 150px auto;
 
     @media(max-width:768px){
         height: 80%;
@@ -837,9 +866,7 @@ footer{
     position: relative;
     flex-direction: column;
     height: 40vh;
-    // background-color: $lightBackground;
     padding: 20px;
-    // border-radius: 5px;
 
     &__img{
         width: 50%;

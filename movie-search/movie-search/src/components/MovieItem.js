@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const MovieItem = ({movie}) => {
 
     const checkPoster = poster =>{
-        return poster==="N/A"? popcorn : poster;
+        return poster==="N/A"? popcorn : !poster ? popcorn : poster;
     }
 
     useEffect(()=>{
